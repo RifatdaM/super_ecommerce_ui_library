@@ -2,7 +2,7 @@ import React from "react";
 
 const Card2 = () => {
   return (
-    <div className="px-4 py-8 shadow-lg max-w-[350px] font-sans rounded-xl space-y-6 my-20 mx-auto">
+    <div className="px-4 py-8 shadow-lg max-w-[350px] font-sans rounded-xl space-y-6 mx-auto">
       <div className="flex justify-center w-full h-48 lg:h-[280px] relative">
         <div className="absolute flex items-center justify-between left-4 right-4 top-4">
           <div className="flex items-center">

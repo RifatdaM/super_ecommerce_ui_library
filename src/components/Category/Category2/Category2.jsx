@@ -2,7 +2,7 @@ import React from "react";
 
 const Category2 = () => {
   return (
-    <div className="grid grid-cols-4 gap-2 pb-10 md:gap-5 ">
+    <div className="grid grid-cols-2 gap-2 pb-10 lg:grid-cols-4 md:gap-5 ">
       <div className="relative overflow-hidden group ">
         <img
           src="https://i.ibb.co/SXzqmqz/Screenshot-2023-12-23-at-1-20-53-PM.png"
