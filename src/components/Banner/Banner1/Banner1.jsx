@@ -14,7 +14,7 @@ const Banner1 = () => {
         {/* text */}
         <div className="absolute inset-x-6 inset-y-10 md:inset-x-10 md:inset-y-20 lg:inset-x-16 lg:inset-y-24">
           <p className="text-sm text-white md:text-xl ">30% off</p>
-          <h1 className=" font-kalam py-2 md:py-6 text-2xl md:text-5xl lg:text-6xl text-white leading-8 md:leading-[55px] lg:leading-[70px]">
+          <h1 className=" font-kalam py-2 md:py-6 text-2xl md:text-4xl lg:text-6xl text-white leading-8 md:leading-[55px] lg:leading-[70px]">
             Most Popular <br /> Makeup
           </h1>
           <button className="mt-6 text-sm text-white border-b-2 md:text-base lg:text-lg">

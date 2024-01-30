@@ -8,22 +8,22 @@ const AllCards = () => {
   return (
     <div>
       {/* card 1 */}
-      <h1 className="py-10 text-3xl font-bold text-transparent md:text-5xl bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 ">
+      <h1 className="py-10 text-3xl font-bold text-transparent md:text-4xl bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 ">
         Card 1
       </h1>
       <Card1 />
       {/* card 2 */}
-      <h1 className="py-10 text-3xl font-bold text-transparent md:text-5xl bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 ">
+      <h1 className="py-10 text-3xl font-bold text-transparent md:text-4xl bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 ">
         Card 2
       </h1>
       <Card2 />
       {/* card 3 */}
-      <h1 className="py-10 text-3xl font-bold text-transparent md:text-5xl bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 ">
+      <h1 className="py-10 text-3xl font-bold text-transparent md:text-4xl bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 ">
         Card 3
       </h1>
       <Card3 />
       {/* card 4 */}
-      <h1 className="py-10 text-3xl font-bold text-transparent md:text-5xl bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 ">
+      <h1 className="py-10 text-3xl font-bold text-transparent md:text-4xl bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 ">
         Card 4
       </h1>
       <Card4 />
