@@ -4,7 +4,7 @@ import ComponentsBar from "./components/ComponentsBar/ComponentsBar";
 
 function App() {
   return (
-    <div className="px-4 mx-auto md:px-8 max-w-7xl">
+    <div>
       {/* list of components */}
 
       {/* sliders 5 type */}

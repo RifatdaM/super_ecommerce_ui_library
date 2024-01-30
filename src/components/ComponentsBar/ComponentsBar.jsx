@@ -40,6 +40,18 @@ const ComponentsBar = () => {
       >
         Category
       </NavLink>
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "pending"
+            : isActive
+            ? " px-6 py-2 text-sm md:text-xl text-white duration-300 rounded-md bg-sky-700 hover:scale-95 "
+            : "px-6 py-2 text-sm md:text-xl text-white duration-300 rounded-md bg-green-600 hover:scale-95"
+        }
+        to={"/header"}
+      >
+        Header
+      </NavLink>
     </div>
   );
 };
