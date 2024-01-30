@@ -3,7 +3,7 @@ const Banner2 = () => {
     <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
       <div>
         <img
-          src="https://i.ibb.co/t2gxBMb/Screenshot-2023-10-18-at-3-58-43-PM.png"
+          src="https://i.ibb.co/hK2CwMF/Screenshot-2023-10-18-at-6-04-29-PM.png"
           alt=""
           className="w-full h-auto rounded-md max-h-56 md:max-h-72 lg:max-h-56 "
         />
