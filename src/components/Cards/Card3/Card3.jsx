@@ -3,11 +3,11 @@ import React from "react";
 const Card3 = () => {
   return (
     <div className="flex items-center justify-center ">
-      <div className="max-w-sm border ">
+      <div className="max-w-sm overflow-hidden border rounded-sm group">
         <img
           src="https://i.ibb.co/PZP8spF/119700093-1395244364007569-4498288726281506922-n.jpg"
           alt="image"
-          className="w-full h-full "
+          className="w-full h-full duration-300 scale-105 rounded-sm group-hover:scale-100"
         />
         {/* details */}
         <div className="px-4 ">

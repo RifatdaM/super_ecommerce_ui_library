@@ -29,6 +29,7 @@ function App() {
       {/* user dashboard */}
       {/* track */}
       <ComponentsBar />
+      <div className=" w-full h-[2px] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% my-6"></div>
       <Outlet />
     </div>
   );
