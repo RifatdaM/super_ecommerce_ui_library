@@ -3,7 +3,7 @@ const Banner2 = () => {
     <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
       <div>
         <img
-          src="https://i.ibb.co/hK2CwMF/Screenshot-2023-10-18-at-6-04-29-PM.png"
+          src="https://i.ibb.co/YX5jXzW/Apple-Watch-Series-9-Top-Banner-9485.webp"
           alt=""
           className="w-full h-auto rounded-md max-h-56 md:max-h-72 lg:max-h-56 "
         />

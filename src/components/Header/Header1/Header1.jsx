@@ -80,12 +80,12 @@ const Header1 = () => {
             type="text"
             className="w-full p-2 rounded-l-md"
           />
-          <button className="px-8 py-2 text-white bg-lime-500 rounded-r-md ">
+          <button className="px-8 py-2 text-white duration-300 bg-lime-500 rounded-r-md hover:text-black ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth={1.5}
+              strokeWidth={2.5}
               stroke="currentColor"
               className="w-6 h-6 "
             >
@@ -99,7 +99,7 @@ const Header1 = () => {
         </div>
         {/* 3rd row */}
         <div className="flex items-center justify-between ">
-          <div className="hidden  lg:block">
+          <div className="hidden lg:block">
             <h1 className="px-4 py-2 text-xl rounded-md font-bold text-yellow-500 before:block before:absolute hover:before:bg-lime-500 before:w-0 before:h-0 hover:before:h-20 hover:before:w-40 before:-top-2 before:-left-2 before:duration-500 before:rounded-xl before:-z-10 relative inline-block transform hover:text-white \-transparent border-2 overflow-hidden border-lime-500 duration-500 cursor-pointer ">
               PC Builder
             </h1>
@@ -171,7 +171,7 @@ const Header1 = () => {
       </div>
       {/* Third column - all navigate item */}
       <div>
-        <ul className="flex items-center justify-between text-lg font-semibold text-white">
+        <ul className="flex flex-col items-start justify-between gap-4 text-lg font-semibold text-white lg:gap-0 lg:items-center lg:flex-row">
           <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
             <svg
               xmlns="http://www.w3.org/2000/svg"
