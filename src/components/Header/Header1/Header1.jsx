@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Header1 = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const handleMouseEnter = () => {
+    setIsOpen(true);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
   return (
-    <div className="px-8 py-5 mx-auto text-white bg-black max-w-[1920px]">
+    <div className="px-8 py-5 mx-auto text-white bg-black max-w-[1920px] relative">
       {/* first col */}
-      <div className="flex justify-center gap-5 text-center ">
+      <div className="justify-center hidden gap-5 text-center lg:flex">
         {/* number div */}
         <div className="flex items-center justify-center gap-2 duration-300 cursor-pointer hover:text-lime-500 ">
           <div className="p-1 border rounded-full">
@@ -80,7 +99,7 @@ const Header1 = () => {
         </div>
         {/* 3rd row */}
         <div className="flex items-center justify-between ">
-          <div>
+          <div className="hidden  lg:block">
             <h1 className="px-4 py-2 text-xl rounded-md font-bold text-yellow-500 before:block before:absolute hover:before:bg-lime-500 before:w-0 before:h-0 hover:before:h-20 hover:before:w-40 before:-top-2 before:-left-2 before:duration-500 before:rounded-xl before:-z-10 relative inline-block transform hover:text-white \-transparent border-2 overflow-hidden border-lime-500 duration-500 cursor-pointer ">
               PC Builder
             </h1>
@@ -149,6 +168,115 @@ const Header1 = () => {
             </svg>
           </div>
         </div>
+      </div>
+      {/* Third column - all navigate item */}
+      <div>
+        <ul className="flex items-center justify-between text-lg font-semibold text-white">
+          <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-7 h-7"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+              />
+            </svg>
+          </li>
+          <div ref={dropdownRef}>
+            <li
+              onMouseEnter={handleMouseEnter}
+              onClick={() => setIsOpen((prev) => !prev)}
+              className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105"
+            >
+              Desktop
+            </li>
+            {isOpen && (
+              <ul className="absolute left-0 grid w-screen grid-cols-6 gap-5 p-8 top-[186px] bg-lime-500">
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 duration-300 w-fit">
+                  Asus
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  Apple
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  Acer
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  Lenevo
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  MSI
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  Huawei
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  Xiaomi
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  Realme
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  Walton
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  Dell
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  Gigabyte
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  HP
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  Microsoft
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  LG
+                </li>
+                <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 w-fit duration-300">
+                  Monster
+                </li>
+              </ul>
+            )}
+          </div>
+          <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
+            Monitor
+          </li>
+          <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
+            Gaming
+          </li>
+          <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
+            Tablet
+          </li>
+          <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
+            Printer
+          </li>
+          <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
+            Camera
+          </li>
+          <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
+            Network
+          </li>
+          <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
+            Security
+          </li>
+          <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
+            Speaker
+          </li>
+          <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
+            Software
+          </li>
+          <li className="duration-300 cursor-pointer hover:text-lime-500 hover:scale-105">
+            Store
+          </li>
+        </ul>
       </div>
     </div>
   );
