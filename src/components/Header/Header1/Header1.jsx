@@ -55,7 +55,7 @@ const Header1 = () => {
             Desktop
           </li>
           {isOpen && (
-            <ul className="absolute left-0 grid w-screen grid-cols-3 md:grid-cols-6 gap-5 p-8 top-40 lg:top-[186px] bg-lime-500">
+            <ul className="absolute left-0 grid w-screen grid-cols-3 md:grid-cols-6 gap-5 p-8 top-40 lg:top-[186px] bg-lime-500 z-10">
               <li className="px-5 py-1.5 rounded-md cursor-pointer hover:bg-gray-100/30 duration-300 w-fit">
                 Asus
               </li>
